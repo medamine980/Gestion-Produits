@@ -1,18 +1,15 @@
 package entities;
 
 public class Produit {
-	
-	
-	
-	private long Id;
+	private long id;
 	private String nom; 
 	private double prix;
     private int quantité;
 	public long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(long id) {
-		Id = id;
+		id = id;
 	}
 	public String getNom() {
 		return nom;
@@ -32,6 +29,27 @@ public class Produit {
 	public void setQuantité(int quantité) {
 		this.quantité = quantité;
 	}
+    
+    public Produit(long id , String nom , double prix , int quantité)
+    {
+    	this.id=id;
+    	this.nom=nom;
+    	this.prix=prix;
+    	this.quantité=quantité;
+    }
+    
+    
+	@Override
+	public String toString() {
+		return "Produit [id=" + id + ", nom=" + nom + ", prix=" + prix + ", quantité=" + quantité + "]";
+	}
+	
+    
+    
+    
+    
+    
+    
     
     
 }
