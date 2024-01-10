@@ -15,7 +15,6 @@ public class Application {
 	 service.Ajouter(produit);
 	 service.Afficher();
 //	 service.Ajouter(produit2);
-	 System.out.println("=========================================================================");
 	 service.Supprimer(3);
 	 service.Afficher();
 	 Produit produitMiseAJour = new Produit(15, "tonic", 1, 50);
