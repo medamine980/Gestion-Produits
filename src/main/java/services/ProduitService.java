@@ -35,6 +35,7 @@ public class ProduitService {
 		{
 			System.out.println(produits.get(i));
 		}
+		System.out.println("#########################################");
 	}
 	
 	public void Supprimer(long id) {
