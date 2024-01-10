@@ -31,10 +31,10 @@ public class ProduitService {
 		
 		
 		for(int i=0;i<produits.size();i++)
-			
 		{
 			System.out.println(produits.get(i));
 		}
+		
 	}
 	
 	public void Supprimer(long id) {
@@ -47,7 +47,15 @@ public class ProduitService {
 		throw new IllegalArgumentException("Le produit recherché n'existe pas");
 	}
 	
-	
+	public void MiseAJour(Produit produit) {
+		for(int i = 0; i < produits.size(); i++) {
+			if(produits.get(i).getId() == produit.getId()) {
+				produits.set(i, produit);
+				return;
+			}
+		}
+		throw new IllegalArgumentException("Le produit recherché n'existe pas");
+	}
 	
 
 }
