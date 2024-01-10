@@ -13,8 +13,9 @@ public class Application {
 	 Produit produit3 = new Produit(3,"Tide",1.23,12);
 	 service.Ajouter(produit3);
 	 service.Ajouter(produit);
+	 service.Afficher();
 	 service.Ajouter(produit2);
-		 
+      
 	}
 
 }

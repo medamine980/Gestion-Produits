@@ -26,6 +26,15 @@ public class ProduitService {
 		
 	}
 	
+	public void Afficher() {
+		
+		
+		for(int i=0;i<produits.size();i++)
+			
+		{
+			System.out.println(produits.get(i));
+		}
+	}
 	
 	
 	
