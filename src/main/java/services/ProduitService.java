@@ -37,6 +37,15 @@ public class ProduitService {
 		}
 	}
 	
+	public void Supprimer(long id) {
+		for(int i = 0; i < produits.size(); i++) {
+			if(produits.get(i).getId() == id) {
+				produits.remove(i);
+				return;
+			}
+		}
+		throw new IllegalArgumentException("Le produit recherché n'existe pas");
+	}
 	
 	
 	
