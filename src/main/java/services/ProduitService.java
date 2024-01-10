@@ -10,7 +10,11 @@ public class ProduitService {
 	
 	public void Ajouter(Produit produit)
 	{
-		
+		if (produit.getQuantité() < 0 || produit.getPrix() < 0) {
+			throw new IllegalArgumentException (
+					"La quantité et le prix du produit doivent toujours être positifs"
+			);
+		}
 		for(int i=0;i<produits.size();i++)
 		{
 			if(produits.get(i).getId()==produit.getId() || produits.get(i).getNom()==produit.getNom())
@@ -20,10 +24,7 @@ public class ProduitService {
 			}
 		
 		}
-		
 		produits.add(produit);
-		
-		
 	}
 	
 	public void Afficher() {
