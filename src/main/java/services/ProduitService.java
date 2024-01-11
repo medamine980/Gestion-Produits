@@ -8,13 +8,17 @@ public class ProduitService {
 	
 	ArrayList<Produit>produits=new ArrayList<Produit>();
 	
-	public void Ajouter(Produit produit)
-	{
+	private void validerProduit(Produit produit) {
 		if (produit.getQuantité() < 0 || produit.getPrix() < 0) {
 			throw new IllegalArgumentException (
 					"La quantité et le prix du produit doivent toujours être positifs"
 			);
-		}
+		}	
+	}
+	
+	public void Ajouter(Produit produit)
+	{
+		validerProduit(produit);
 		for(int i=0;i<produits.size();i++)
 		{
 			if(produits.get(i).getId()==produit.getId() || produits.get(i).getNom()==produit.getNom())
@@ -47,6 +51,7 @@ public class ProduitService {
 	}
 	
 	public void MiseAJour(Produit produit) {
+		validerProduit(produit);
 		for(int i = 0; i < produits.size(); i++) {
 			if(produits.get(i).getId() == produit.getId()) {
 				produits.set(i, produit);
