@@ -20,7 +20,6 @@ public class Application {
 	 Produit produitMiseAJour = new Produit(15, "tonic", 1, 50);
 	 service.MiseAJour(produitMiseAJour);
 	 service.Afficher();
-	 
 	}
 
 }

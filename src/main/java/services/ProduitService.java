@@ -26,8 +26,20 @@ public class ProduitService {
 		}
 		produits.add(produit);
 	}
+	public ArrayList<Produit> RecupererTouts(){
+		return produits;
+	}
 	
-	public void Afficher() {		
+	public Produit RecupererParId(long id) {
+		for(int i=0;i<produits.size();i++) {
+			if(produits.get(i).getId() == id) {
+				return produits.get(i);
+			}
+		}
+		return null;
+	}
+	
+	public void Afficher() {
 		for(int i=0;i<produits.size();i++)
 		{
 			System.out.println(produits.get(i));
