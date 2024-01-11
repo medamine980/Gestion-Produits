@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+  - openjdk8
+
+script: mvn clean test
+
+notifications:
+  email:
+    - benali.medamine2002@gmail.com
+    - chakirmoussaoui45@gmal.com
