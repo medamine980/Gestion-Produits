@@ -9,7 +9,7 @@ public class Produit {
 		return id;
 	}
 	public void setId(long id) {
-		id = id;
+		this.id = id;
 	}
 	public String getNom() {
 		return nom;
@@ -42,6 +42,17 @@ public class Produit {
 	@Override
 	public String toString() {
 		return "Produit [id=" + id + ", nom=" + nom + ", prix=" + prix + ", quantité=" + quantité + "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		Produit produit = (Produit) obj;
+		if(this.id == produit.id && this.nom == produit.nom &&
+				this.prix == produit.prix && this.quantité == produit.quantité) {
+			return true;
+		}
+		return false;
 	}
 	
     
