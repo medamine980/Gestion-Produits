@@ -14,7 +14,9 @@ public class Application {
 	 service.Ajouter(produit3);
 	 service.Ajouter(produit);
 	 service.Afficher();
-	 service.Ajouter(produit2);
+	 
+	 ///////////////////////////////////////////
+	 System.out.println(service.RecupererParId(3));
       
 	}
 
